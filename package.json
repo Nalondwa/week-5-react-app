@@ -1,5 +1,5 @@
 {
-  "name": "week-5-react-app",
+  "name": "k-weather-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,9 +7,9 @@
     "bootstrap": "^5.3.3",
     "cra-template": "1.2.0",
     "react": "^19.0.0",
+    "react-animated-weather": "^4.0.1",
     "react-dom": "^19.0.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^4.2.4"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,5 +34,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.26.3",
+    "web-vitals": "^4.2.4"
   }
 }

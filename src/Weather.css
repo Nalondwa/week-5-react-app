@@ -50,7 +50,7 @@
     margin-left: 0.25rem;
 }
 .search-input {
-    background-color: #706e6e;
+    background-color: #e4e1e1;
     border: none;
     border-radius: 5px;
     padding: 12px 30px;
@@ -60,12 +60,12 @@
 
 
   .search-submit-button {
-    background-color: #706e6e;
+    background-color: #e4e1e1;
     border-color: #ffffff;
     margin-left: 3px;
     padding: 12px 30px;
     border-radius: 15px;
-    color: #ffffff;
+    color: #000000;
   }
   
   .search-submit-button:hover {

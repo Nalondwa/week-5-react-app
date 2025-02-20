@@ -50,7 +50,5 @@ export default function WeatherForecast(props) {
         </div>
       </div>
     );
-  } else {
-    return <div>Loading...</div>;
-  }
+  } 
 }

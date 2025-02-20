@@ -1,7 +1,7 @@
 import React from "react";
-
+import "./WeatherInfo.css";
 export default function WeatherIcon(props) {
-  const iconUrl = `http://openweathermap.org/img/wn/${props.code}@2x.png`;
-
-  return <img src={iconUrl} alt="Weather Icon" width={props.size} />;
+  return (
+    <img src={props.iconUrl} className="weather-app-icon" alt="" />
+  );
 }

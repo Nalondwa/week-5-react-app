@@ -4,6 +4,7 @@ import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
 
+
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
@@ -24,13 +25,13 @@ export default function Weather(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    search();
+    Search();
   }
   function handleCityChange(event) {
     setCity(event.target.value);
   }
 
-  function search() {
+  function Search() {
     let apiKey = "441fcacb9dt020b37114da0ba3e3f5of";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
@@ -39,32 +40,37 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <form onSubmit={handleSubmit}>
+        <form className="search-form" id="search-form" onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-9">
+            <div className="col-md-9">
               <input
                 type="search"
-                placeholder="Enter a city.."
-                className="form-control"
-                autoFocus="on"
+                placeholder="Enter a city..."
+                required
+                id="search-form-input"
+                className="search-input"
                 onChange={handleCityChange}
               />
             </div>
-            <div className="col-3">
+            <div className="col-md-3 ">
               <input
                 type="submit"
-                value="Search"
-                className="btn btn-primary w-100"
+                className="search-submit-button"
+                value="search"
               />
             </div>
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-        <WeatherForecast />
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
-    search();
-    return null;
+    Search();
+    return (
+      <div className="d-flex align-items-center justify-content-center">
+       
+      </div>
+    );
   }
 }

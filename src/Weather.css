@@ -49,3 +49,30 @@
     top: -0.5rem;
     margin-left: 0.25rem;
 }
+.search-input {
+    background-color: #706e6e;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 30px;
+  
+   width: 90%;
+}
+
+
+  .search-submit-button {
+    background-color: #706e6e;
+    border-color: #ffffff;
+    margin-left: 3px;
+    padding: 12px 30px;
+    border-radius: 15px;
+    color: #ffffff;
+  }
+  
+  .search-submit-button:hover {
+    background-color: #706e6e;
+  }
+  
+  .search-submit-button:active {
+    transform: scale(0.95);
+    background-color: #706e6e;
+  }

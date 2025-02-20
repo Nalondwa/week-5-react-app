@@ -1,29 +1,110 @@
 .App {
   max-width: 600px;
   margin: 40px auto;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-weight: 300;
   line-height: 1.5;
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+.App:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 .App footer {
   font-size: 12px;
-  margin-top: 10px;
+  margin-top: 20px;
   text-align: center;
-  color: #666;
+  color: #555;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
 }
 
 .App a {
   color: #007bff;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .App a:hover {
+  color: #0056b3;
   text-decoration: underline;
 }
 
+/* Additional Styling for Weather Components */
+.weather-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.weather-header h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.weather-info {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weather-info p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.weather-info .temperature {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ff6f61;
+}
+
+.weather-info .description {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #007bff;
+}
+
+/* Button Styling */
+.button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .App {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .weather-header h1 {
+    font-size: 2rem;
+  }
+
+  .weather-info .temperature {
+    font-size: 1.8rem;
+  }
+}
